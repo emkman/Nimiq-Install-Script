@@ -28,27 +28,7 @@ WALLET="NQ03 7EHY 0UFJ 6S6Q 2XAG YHN6 3J22 JM6A 926G"
 EXTRADATA=$(uname -a | awk  '{print $2}')
 STATISTICS=15
 
-output " "
-output "Making sure everything is up to date."
-output " "
 
-sudo add-apt-repository -y ppa:deadsnakes/ppa
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y autoremove
-
-output " "
-output "Adding nodejs sources."
-output " "
-sleep 3
-
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
-
-output " "
-output "Installing required dependencies."
-output " "
-
-sudo apt-get install -y git build-essential python2.7 python-dev nodejs unzip
 
 output " "
 output "Downloading Nimiq core."
